@@ -3,12 +3,14 @@
   "displayName": "CodeZen - Coding Merit Tracker",
   "description": "Turn every keystroke into merit. A mindful coding companion for VS Code. 写代码攒功德，把编码变成修行。",
   "version": "0.1.0",
+  "license": "MIT",
   "publisher": "frankliu20",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Entertainment"
   ],
   "keywords": [
     "merit",
@@ -29,6 +31,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/frankliu20/codezen"
+  },
+  "homepage": "https://github.com/frankliu20/codezen#readme",
+  "bugs": {
+    "url": "https://github.com/frankliu20/codezen/issues"
   },
   "contributes": {
     "commands": [

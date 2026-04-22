@@ -1,0 +1,12 @@
+.vscode/**
+node_modules/**
+src/**
+.gitignore
+tsconfig.json
+**/*.ts
+**/*.map
+media/muyu_ref.*
+media/icon.svg
+README.zh-CN.md
+icon.png
+*.vsix
