@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#1a1a2e"/>
+  <!-- Wooden fish body -->
+  <ellipse cx="64" cy="72" rx="32" ry="24" fill="#8B6914" stroke="#6B4F12" stroke-width="2"/>
+  <!-- Wood grain lines -->
+  <path d="M40 68 Q64 60 88 68" fill="none" stroke="#A07818" stroke-width="1.5" opacity="0.6"/>
+  <path d="M42 76 Q64 70 86 76" fill="none" stroke="#A07818" stroke-width="1.5" opacity="0.6"/>
+  <!-- Fish eye -->
+  <circle cx="64" cy="68" r="4" fill="#1a1a2e"/>
+  <circle cx="65" cy="67" r="1.5" fill="#444"/>
+  <!-- Striker / mallet -->
+  <line x1="38" y1="42" x2="54" y2="58" stroke="#D4A030" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="36" cy="40" r="5" fill="#D4A030"/>
+  <!-- Merit sparkles -->
+  <text x="80" y="38" font-size="16" fill="#FFD700">✦</text>
+  <text x="90" y="52" font-size="10" fill="#FFD700" opacity="0.7">✦</text>
+  <text x="72" y="30" font-size="10" fill="#FFD700" opacity="0.5">✦</text>
+  <!-- Zen text -->
+  <text x="64" y="110" font-family="serif" font-size="14" fill="#FFD700" text-anchor="middle" font-weight="bold">ZEN</text>
+</svg>

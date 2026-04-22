@@ -1,0 +1,114 @@
+{
+  "name": "codezen",
+  "displayName": "CodeZen - Coding Merit Tracker",
+  "description": "Turn every keystroke into merit. A mindful coding companion for VS Code. 写代码攒功德，把编码变成修行。",
+  "version": "0.1.0",
+  "publisher": "frankliu20",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "merit",
+    "wooden fish",
+    "木鱼",
+    "功德",
+    "zen",
+    "mindful",
+    "coding",
+    "fun",
+    "productivity"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankliu20/codezen"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "codezen.showMeritBook",
+        "title": "CodeZen: Show Merit Book"
+      },
+      {
+        "command": "codezen.toggleSound",
+        "title": "CodeZen: Toggle Sound"
+      },
+      {
+        "command": "codezen.reset",
+        "title": "CodeZen: Reset Merit"
+      },
+      {
+        "command": "codezen.toggleMuyu",
+        "title": "CodeZen: Toggle Muyu Panel"
+      }
+    ],
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "codezen-panel",
+          "title": "CodeZen",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "codezen-panel": [
+        {
+          "type": "webview",
+          "id": "codezen.muyuView",
+          "name": "🪵 Muyu"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "CodeZen",
+      "properties": {
+        "codezen.sound.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable wooden fish sound effect on keystroke"
+        },
+        "codezen.sound.probability": {
+          "type": "number",
+          "default": 0.01,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Probability of sound playing per keystroke (0-1)"
+        },
+        "codezen.statusBar.format": {
+          "type": "string",
+          "default": "🪵 {merit}",
+          "description": "Status bar display format. Use {merit} for count, {rank} for title"
+        },
+        "codezen.locale": {
+          "type": "string",
+          "default": "auto",
+          "enum": [
+            "auto",
+            "en",
+            "zh-CN"
+          ],
+          "description": "Display language (auto follows VS Code language)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
