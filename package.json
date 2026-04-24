@@ -2,7 +2,7 @@
   "name": "codezen",
   "displayName": "CodeZen - Coding Merit Tracker",
   "description": "Turn every keystroke into merit. A mindful coding companion for VS Code. 写代码攒功德，把编码变成修行。",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "publisher": "frankliu20",
   "engines": {

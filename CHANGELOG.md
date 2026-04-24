@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 - 2026-04-24
+
+### Changed
+- Revamped README with marketing-oriented style (EN + CN)
+- Automated VS Code Marketplace publishing via GitHub Actions
+
 ## 0.1.1 - 2026-04-24
 
 ### Added
