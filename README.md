@@ -1,62 +1,101 @@
-# CodeZen 🪵
+<p align="center">
+  <img src="media/icon.png" width="128" alt="CodeZen logo" />
+</p>
 
-> Turn every keystroke into merit. A mindful coding companion for VS Code.
+<h1 align="center">CodeZen 🪵</h1>
 
-[中文文档](./README.zh-CN.md)
+<p align="center">
+  <strong>Every keystroke is a prayer. Every line of code, a step toward enlightenment.</strong><br>
+  The most zen VS Code extension you never knew you needed.
+</p>
+
+<p align="center">
+  <a href="./README.zh-CN.md">中文文档</a>
+</p>
+
+---
+
+## What is CodeZen?
+
+CodeZen turns your daily coding grind into a **spiritual journey**. Each keystroke earns **merit (功德)** — and yes, even your AI copilot's code counts now.
+
+Watch a gorgeous wooden fish animation respond to your typing. Level up through 7 ranks. Become the enlightened developer you were always meant to be.
+
+**No tracking. No telemetry. Just vibes.** ✨
+
+## Why CodeZen?
+
+- 😩 **Problem**: You write thousands of lines of code every day and get nothing but bugs in return.
+- 🪵 **Solution**: Now every character earns you merit. Even deleting code won't hurt you — because we believe in mercy (慈悲为怀 🙏).
 
 ## Features
 
-- **Merit Counter** — Every keystroke earns merit, displayed in the status bar
-- **Muyu Animation** — Sidebar wooden fish with real-time knock animation, ripple effects, and floating "+1"
-- **Anti-Cheat** — Only genuine typing counts (paste, autocomplete, and macros are filtered out)
-- **7-Level Rank System** — Progress from Seeker to Enlightened with milestone notifications
-- **Optional Sound** — Wooden fish sound with configurable trigger probability
-- **Bilingual** — Full English and 中文 support
-- **Pure Local** — Zero data uploaded, everything stored locally via VS Code globalState
+🧘 **Merit System** — Real-time merit counter in your status bar. Type. Earn. Ascend.
 
-## Ranks
+🐟 **Muyu (木鱼) Animation** — A beautiful wooden fish panel with knock animations, golden ripples, and floating "+1" — because dopamine matters.
 
-| Lv | Title | Merit Required |
-|----|-------|---------------|
-| 1 | Seeker | 0 |
-| 2 | Novice | 1,000 |
-| 3 | Code Monk | 10,000 |
-| 4 | Zen Master | 50,000 |
-| 5 | Code Arhat | 200,000 |
-| 6 | Architect Bodhisattva | 1,000,000 |
-| 7 | Enlightened | 10,000,000 |
+🤖 **AI Agent Support** — Using Copilot, Claude, or Cursor? Their output earns merit too (configurable weight). Welcome to 2026.
 
-## Getting Started
+🏆 **7-Level Rank System** — From humble *Seeker* to legendary *Enlightened*. Each rank-up comes with a celebratory notification.
 
-1. Install the extension
-2. The status bar shows `🪵 0` — start typing to earn merit
-3. Click the CodeZen icon in the activity bar to open the Muyu animation panel
-4. Click the status bar merit counter to view your Merit Book
+🔊 **Optional Sound Effects** — Toggle wooden fish sound with configurable probability. ASMR for developers.
 
-## Commands
+🌏 **Bilingual** — Full English and 中文 support. Your merit transcends language.
 
-| Command | Description |
-|---------|-------------|
-| `CodeZen: Show Merit Book` | View total merit, current rank, and progress to next level |
-| `CodeZen: Toggle Sound` | Enable/disable wooden fish sound effect |
-| `CodeZen: Reset Merit` | Reset all merit to zero (requires confirmation) |
+🔒 **100% Local & Private** — Zero data leaves your machine. Everything lives in VS Code's local storage. Period.
+
+## Your Path to Enlightenment
+
+| Lv | Rank | Merit Required | |
+|----|------|---------------|-|
+| 1 | **Seeker** (施主) | 0 | *Everyone starts somewhere* |
+| 2 | **Novice** (沙门) | 1,000 | *The journey begins* |
+| 3 | **Code Monk** (码僧) | 10,000 | *Dedication shows* |
+| 4 | **Zen Master** (禅师) | 50,000 | *One with the codebase* |
+| 5 | **Code Arhat** (代码罗汉) | 200,000 | *Bugs fear you* |
+| 6 | **Architect Bodhisattva** (架构菩萨) | 1,000,000 | *Systems bend to your will* |
+| 7 | **Enlightened** (编程成佛) | 10,000,000 | *You ARE the code* |
+
+## Get Started in 30 Seconds
+
+1. **Install** CodeZen from the VS Code Marketplace
+2. See `🪵 0` in your status bar — **start typing** to earn merit
+3. Click the **CodeZen icon** in the activity bar to watch the Muyu animation
+4. Click the **merit counter** in the status bar to open your Merit Book
+
+That's it. No config needed. Just code.
 
 ## Settings
 
-| Setting | Default | Description |
+| Setting | Default | What it does |
 |---------|---------|-------------|
-| `codezen.sound.enabled` | `false` | Enable wooden fish sound |
-| `codezen.sound.probability` | `0.01` | Probability of sound per keystroke (0–1) |
-| `codezen.statusBar.format` | `🪵 {merit}` | Status bar format. Variables: `{merit}`, `{rank}` |
-| `codezen.locale` | `auto` | Language: `auto`, `en`, `zh-CN` |
+| `codezen.agent.enabled` | `true` | Count AI agent output as merit |
+| `codezen.agent.weight` | `10` | Characters per 1 merit (AI input) |
+| `codezen.agent.maxPerMinute` | `600` | Rate limit for agent merit |
+| `codezen.sound.enabled` | `false` | Wooden fish sound effects |
+| `codezen.sound.probability` | `0.01` | Sound trigger probability (0–1) |
+| `codezen.statusBar.format` | `🪵 {merit}` | Format string (`{merit}`, `{rank}`) |
+| `codezen.locale` | `auto` | Language: `auto` / `en` / `zh-CN` |
 
-## Anti-Cheat Rules
+## Anti-Cheat? More Like Anti-Greed 😤
 
-- Only single-character inputs count (paste and bulk inserts are ignored)
-- Repeated same-key presses decay after 5 hits
-- Per-minute cap of 300 merit (blocks key-repeat macros)
-- Backspace / delete do not deduct merit (mercy mode 🙏)
+We keep it fair, but merciful:
+
+- ✅ Human typing → 1 merit per keystroke
+- ✅ AI agent output → 1 merit per N characters (configurable)
+- ⛔ Key-repeat macros → Capped at 300/min
+- ⛔ Same key spam → Decays after 5 repeats
+- 🙏 Backspace/delete → No penalty (mercy mode)
+
+## Commands
+
+| Command | What it does |
+|---------|-------------|
+| `CodeZen: Show Merit Book` | Your spiritual progress report |
+| `CodeZen: Toggle Sound` | 🔔 / 🔕 |
+| `CodeZen: Reset Merit` | Nuclear option (requires confirmation) |
+| `CodeZen: Toggle Muyu Panel` | Show/hide the wooden fish |
 
 ## License
 
-MIT
+MIT — Free as in enlightenment.
