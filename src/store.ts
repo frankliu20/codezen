@@ -6,6 +6,8 @@ const KEYS = {
   todayDate: 'codezen.todayDate',
   rankLevel: 'codezen.rankLevel',
   firstUseDate: 'codezen.firstUseDate',
+  agentMerit: 'codezen.agentMerit',
+  todayAgentMerit: 'codezen.todayAgentMerit',
 };
 
 export class MeritStore {
@@ -36,10 +38,30 @@ export class MeritStore {
     return this.state.get<string>(KEYS.firstUseDate, new Date().toISOString());
   }
 
+  get agentMerit(): number {
+    return this.state.get<number>(KEYS.agentMerit, 0);
+  }
+
+  get todayAgentMerit(): number {
+    this.rolloverDay();
+    return this.state.get<number>(KEYS.todayAgentMerit, 0);
+  }
+
+  /** Combined total of human + agent merit. */
+  get combinedMerit(): number {
+    return this.totalMerit + this.agentMerit;
+  }
+
   async addMerit(amount: number): Promise<void> {
     this.rolloverDay();
     await this.state.update(KEYS.totalMerit, this.totalMerit + amount);
     await this.state.update(KEYS.todayMerit, this.state.get<number>(KEYS.todayMerit, 0) + amount);
+  }
+
+  async addAgentMerit(amount: number): Promise<void> {
+    this.rolloverDay();
+    await this.state.update(KEYS.agentMerit, this.agentMerit + amount);
+    await this.state.update(KEYS.todayAgentMerit, this.state.get<number>(KEYS.todayAgentMerit, 0) + amount);
   }
 
   async setRankLevel(level: number): Promise<void> {
@@ -50,6 +72,8 @@ export class MeritStore {
     await this.state.update(KEYS.totalMerit, 0);
     await this.state.update(KEYS.todayMerit, 0);
     await this.state.update(KEYS.rankLevel, 1);
+    await this.state.update(KEYS.agentMerit, 0);
+    await this.state.update(KEYS.todayAgentMerit, 0);
     await this.state.update(KEYS.todayDate, this.getToday());
   }
 

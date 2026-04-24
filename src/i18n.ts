@@ -1,6 +1,8 @@
 // i18n messages for CodeZen
 export interface Messages {
   merit: string;
+  humanMerit: string;
+  agentMerit: string;
   rankUp: (rank: string) => string;
   meritBook: (merit: number, rank: string, today: number, streak: string) => string;
   resetConfirm: string;
@@ -12,6 +14,8 @@ export interface Messages {
 
 const en: Messages = {
   merit: 'Merit',
+  humanMerit: 'Human Merit',
+  agentMerit: 'Agent Merit',
   rankUp: (rank) => `Congratulations! You have ascended to "${rank}" 🙏`,
   meritBook: (merit, rank, today, streak) =>
     `📿 Merit Book\n\n` +
@@ -36,6 +40,8 @@ const en: Messages = {
 
 const zhCN: Messages = {
   merit: '功德',
+  humanMerit: '人工功德',
+  agentMerit: 'AI功德',
   rankUp: (rank) => `恭喜施主晋升「${rank}」🙏`,
   meritBook: (merit, rank, today, streak) =>
     `📿 功德簿\n\n` +
