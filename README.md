@@ -13,6 +13,13 @@
   <a href="./README.zh-CN.md">中文文档</a>
 </p>
 
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=frankliu20.codezen"><img src="https://img.shields.io/visual-studio-marketplace/v/frankliu20.codezen?label=Marketplace&color=blue" alt="VS Code Marketplace" /></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=frankliu20.codezen"><img src="https://img.shields.io/visual-studio-marketplace/i/frankliu20.codezen?label=Installs&color=green" alt="Installs" /></a>
+  <a href="https://github.com/frankliu20/codezen/actions/workflows/ci.yml"><img src="https://github.com/frankliu20/codezen/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+</p>
+
 ---
 
 ## What is CodeZen?
