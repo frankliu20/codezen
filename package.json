@@ -102,6 +102,25 @@
             "zh-CN"
           ],
           "description": "Display language (auto follows VS Code language)"
+        },
+        "codezen.agent.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Count AI agent / multi-character input as merit"
+        },
+        "codezen.agent.weight": {
+          "type": "number",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "Characters per 1 merit for AI agent input (e.g. 10 = 1 merit per 10 characters)"
+        },
+        "codezen.agent.maxPerMinute": {
+          "type": "number",
+          "default": 600,
+          "minimum": 1,
+          "maximum": 10000,
+          "description": "Maximum agent merit per minute (rate limit)"
         }
       }
     }
