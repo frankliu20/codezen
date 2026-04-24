@@ -5,6 +5,9 @@
   "version": "0.1.3",
   "license": "MIT",
   "publisher": "frankliu20",
+  "author": {
+    "name": "Frank Liu"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
