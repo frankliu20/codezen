@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.1 - 2026-04-24
+
+### Added
+
+- AI agent merit counting: multi-character input (Copilot, Claude, Cursor, etc.) now earns merit
+- Configurable agent merit weight (`codezen.agent.weight`, default: 10 chars per 1 merit)
+- Agent merit toggle (`codezen.agent.enabled`) and rate limit (`codezen.agent.maxPerMinute`)
+- Separate human vs agent merit breakdown in Merit Book
+- Bilingual labels for agent merit (English / 中文)
+
 ## 0.1.0 - 2026-04-22
 
 ### Initial Release
