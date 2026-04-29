@@ -10,9 +10,7 @@ export class MuyuViewProvider implements vscode.WebviewViewProvider {
     this.view = webviewView;
     webviewView.webview.options = { enableScripts: true };
     webviewView.webview.html = this.getHtml();
-    if (this.currentMerit > 0 || this.currentRank) {
-      webviewView.webview.postMessage({ type: 'update', merit: this.currentMerit, rank: this.currentRank });
-    }
+    webviewView.webview.postMessage({ type: 'update', merit: this.currentMerit, rank: this.currentRank });
   }
 
   knock() {
