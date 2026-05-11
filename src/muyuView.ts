@@ -3,11 +3,14 @@ import * as vscode from 'vscode';
 export class MuyuViewProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = 'codezen.muyuView';
   private view?: vscode.WebviewView;
+  private currentMerit = 0;
+  private currentRank = '';
 
   resolveWebviewView(webviewView: vscode.WebviewView) {
     this.view = webviewView;
     webviewView.webview.options = { enableScripts: true };
     webviewView.webview.html = this.getHtml();
+    webviewView.webview.postMessage({ type: 'update', merit: this.currentMerit, rank: this.currentRank });
   }
 
   knock() {
@@ -15,6 +18,8 @@ export class MuyuViewProvider implements vscode.WebviewViewProvider {
   }
 
   updateMerit(merit: number, rank: string) {
+    this.currentMerit = merit;
+    this.currentRank = rank;
     this.view?.webview.postMessage({ type: 'update', merit, rank });
   }
 
